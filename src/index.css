@@ -1,0 +1,124 @@
+body{
+    background-color: rgb(236, 217, 223);
+    color: white;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.ninetyPer{
+    display: flex;
+    width: 80%;
+    
+    height: 100%;
+    margin-bottom: 20px;
+    
+    justify-content: center;
+    align-items: center;
+    
+
+}
+
+.tenPer{
+  min-width: 20%;
+  display: flex;
+  height: 100%;
+  background-color: rgb(247, 97, 114);
+  justify-content: center;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 80%;
+}
+.scale-in-hor-right {
+	-webkit-animation: scale-in-hor-right 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: scale-in-hor-right 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+.hide{
+  display: none;
+}
+.show{
+  display: flex;
+}
+
+.slide-out-right {
+	-webkit-animation: slide-out-right 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+	        animation: slide-out-right 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+}
+
+@keyframes slide-out-right {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateX(1000px);
+            transform: translateX(1000px);
+    opacity: 0;
+  }
+}
+
+@keyframes scale-in-hor-right {
+  0% {
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+    -webkit-transform-origin: 100% 100%;
+            transform-origin: 100% 100%;
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+    -webkit-transform-origin: 100% 100%;
+            transform-origin: 100% 100%;
+    opacity: 1;
+  }
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: rgb(240, 164, 173); 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgb(121, 85, 99); 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgb(0, 167, 225); 
+  }
+
+
+  @media only screen and (max-width: 600px){
+    .tenPer{
+      min-width: 100%;
+      left: none;
+      right: none;
+    }
+  }
+  @media only screen and (max-width: 992px){
+
+.ninetyPer{
+  width: 100%;
+}
+
+.tenPer{
+  display: flex;
+  
+  min-width: 50%;
+  left: 50%;
+  right: auto;
+  
+  
+}
+
+  }
